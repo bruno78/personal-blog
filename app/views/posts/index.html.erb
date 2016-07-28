@@ -1,8 +1,18 @@
-<h1> This is index.html.erb file! Yay</h1>
+<!-- That goes on the main page -->
+
 <% @posts.each do |post| %>
-  <div class="post_wrapper">
-    <h2 class="title"><%= link_to post.title, post %></h2>
-    <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> </p>
-    <h3 class="blurb"><%= post.blurb %></h3>
-  </div>
+  <h2>
+      <%= link_to post.title, post %>
+  </h2>
+  <p class="lead">
+      by <a href="index.php">Bruno G. Tavares</a>
+  </p>
+  <p><span class="glyphicon glyphicon-time"></span><%= post.created_at.strftime("%B %d, %Y") %></p>
+  <hr>
+  <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+  <hr>
+  <p><%= post.blurb %></p>
+  <p class="btn btn-primary" ><%= link_to "Read More", post %><span class="glyphicon glyphicon-chevron-right"></span></p>
+
+  <hr>
 <% end %>
