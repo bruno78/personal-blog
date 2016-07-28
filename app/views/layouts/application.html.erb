@@ -42,11 +42,9 @@
                   <li><a href="#">Github</a></li>
                   <li><a href="#">Google+</a></li>
                   <li><a href="#">LinkedIn</a></li>
+                  <li><%= link_to "New Post", new_post_path %></li>
+                  <li><a href="#">Log Out</a></li>
               </ul>
-              <div class="buttons">
-                <button type="button" name="button"><%= link_to "New Post", new_post_path %></button>
-                <button type="button" name="button">Log Out</button>
-              </div>
           </div>
           <!-- /.navbar-collapse -->
       </div>
@@ -64,14 +62,11 @@
             <% flash.each do |name, msg| %>
               <% content_tag(:div, msg, class: "alert") %>
             <% end %>
-              <h1 class="page-header">
-                  Page Heading
-                  <small>Secondary Text</small>
-              </h1>
-
+              
               <%= yield %>
 
-              <!-- Pager -->
+
+              <!-- Pager
               <ul class="pager">
                   <li class="previous">
                       <a href="#">&larr; Older</a>
@@ -79,7 +74,7 @@
                   <li class="next">
                       <a href="#">Newer &rarr;</a>
                   </li>
-              </ul>
+              </ul> -->
 
           </div>
 

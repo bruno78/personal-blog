@@ -1,4 +1,8 @@
-<!-- That goes on the main page -->
+<!-- The posts goes on the main page -->
+<h1 class="page-header">
+    Page Heading
+    <small>Secondary Text</small>
+</h1>
 
 <% @posts.each do |post| %>
   <h2>
@@ -7,12 +11,12 @@
   <p class="lead">
       by <a href="index.php">Bruno G. Tavares</a>
   </p>
-  <p><span class="glyphicon glyphicon-time"></span><%= post.created_at.strftime("%B %d, %Y") %></p>
+  <p><span class="glyphicon glyphicon-time"></span> <%= post.created_at.strftime("%B %d, %Y") %></p>
   <hr>
   <img class="img-responsive" src="http://placehold.it/900x300" alt="">
   <hr>
   <p><%= post.blurb %></p>
-  <p class="btn btn-primary" ><%= link_to "Read More", post %><span class="glyphicon glyphicon-chevron-right"></span></p>
+  <p ><%= link_to "Read More", post, class: "btn btn-primary" %><span class="glyphicon glyphicon-chevron-right"></span></p>
 
   <hr>
 <% end %>
