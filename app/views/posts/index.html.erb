@@ -3,5 +3,6 @@
   <div class="post_wrapper">
     <h2 class="title"><%= link_to post.title, post %></h2>
     <p class="date"><%= post.created_at.strftime("%B %d, %Y") %> </p>
+    <h3 class="blurb"><%= post.blurb %></h3>
   </div>
 <% end %>
