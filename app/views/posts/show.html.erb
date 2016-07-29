@@ -6,9 +6,11 @@
    <!-- Title -->
    <h1><%= @post.title %></h1>
 
-   <!-- Author -->
+   <!-- Author/tags -->
    <p class="lead">
-       by <a href="#">Bruno G. Tavares</a>
+     <% if @post.all_tags != "" %>
+        under <%=raw tag_links(@post.all_tags) %>
+     <% end %>
    </p>
 
    <hr>
