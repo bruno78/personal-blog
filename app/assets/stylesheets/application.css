@@ -30,3 +30,14 @@
    url('../assets/glyphicons-halflings-regular.ttf') format('truetype'),
    url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
  }
+
+ /* To set up img size for the posts
+ .container {
+   width: 900px; try percentage if it doesn't work
+ }
+
+ .container img {
+   max-height: 100%;
+   max-width: 100%;
+ }
+ */

@@ -62,6 +62,15 @@
             <% flash.each do |name, msg| %>
               <% content_tag(:div, msg, class: "alert") %>
             <% end %>
+            <h1 class="page-header">
+              <% if current_page?(root_path) %>
+                Page Heading
+                <small>Secondary Text</small>
+              <% else %>
+              <small><%= link_to "Back to All Projects", root_path %></small>
+              <% end %>
+            </h1>
+
 
               <%= yield %>
 
@@ -133,7 +142,7 @@
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; Your Website 2014</p>
+                  <p>Copyright &copy; Brunogtavares 2016</p>
               </div>
               <!-- /.col-lg-12 -->
           </div>
