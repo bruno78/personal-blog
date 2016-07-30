@@ -18,4 +18,5 @@ class Post < ActiveRecord::Base
     Tag.find_by_name!(name).posts
   end
 
+
 end
