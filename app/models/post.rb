@@ -2,11 +2,11 @@ class Post < ActiveRecord::Base
   validates :title, presence: true, length: { minimum: 5 }
   validates :body, presence: true
   has_many :taggings
-  has_many :tags, through: :taggings
+  has_many :tags, through: :taggings, dependent: :destroy
 
   def all_tags=(names)
     self.tags = names.split(',').map do |name|
-      Tag.where(name: name.strip).first_or_create!
+      Tag.where(name: name.strip.downcase).first_or_create!
     end
   end
 

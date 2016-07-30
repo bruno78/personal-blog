@@ -4,9 +4,17 @@ module PostsHelper
   end
 
   def categorizer(tags)
-    tags = tags.sort
+    tags = tags.sort_by(&:name)
     tags.each do |tag|
       yield(tag)
+    end
+  end
+
+  def tag_cloud(tags, classes)
+    max = tags.sort_by(&:count).last
+    tags.each do |tag|
+      index = tag.count.to_f / max.count * (classes.seize - 1)
+      yield(tag, classes[index.round])
     end
   end
 end
