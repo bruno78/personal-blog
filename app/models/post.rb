@@ -18,5 +18,11 @@ class Post < ActiveRecord::Base
     Tag.find_by_name!(name).posts
   end
 
+  def self.search(search)
+    return scoped unless search.present?
+    where("title LIKE ?", "%#{search}%")
+    where("blurb LIKE ?", "%#{search}%")
+    where("body LIKE ?", "%#{search}%")
+  end
 
 end

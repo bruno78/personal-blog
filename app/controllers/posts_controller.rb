@@ -1,9 +1,14 @@
 class PostsController < ApplicationController
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
 
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
+              .paginate(:page => params[:page], :per_page => 3)
+              .order('created_at DESC')
+    elsif params[:search]
+      @posts = Post.search(params[:search])
               .paginate(:page => params[:page], :per_page => 3)
               .order('created_at DESC')
     else
@@ -29,15 +34,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
 
     if @post.update(params[:post].permit(:title, :blurb, :body, :all_tags))
       redirect_to @post
@@ -47,7 +49,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
 
     redirect_to root_path
@@ -56,6 +57,10 @@ class PostsController < ApplicationController
   private
     def post_params
       params.require(:post).permit(:title, :blurb, :body, :all_tags)
+    end
+
+    def find_post
+      @post = Post.find(params[:id])
     end
 
 end

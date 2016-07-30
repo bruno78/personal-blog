@@ -17,4 +17,9 @@
   <hr>
 <% end %>
 
+<form action="<%= posts_path %>" method="get" >
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", name: nil %>
+</form>
+
 <div class="pager"><%= will_paginate @posts, :page_links => false %></div>

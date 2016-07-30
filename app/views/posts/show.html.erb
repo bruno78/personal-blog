@@ -29,6 +29,6 @@
 
    <!-- Post Content -->
    <p class="lead"><%= @post.blurb %></p>
-   <p><%= @post.body.html_safe %></p>
+   <p><%= markdown @post.body %></p>
 
    <hr>

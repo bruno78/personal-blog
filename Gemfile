@@ -46,3 +46,5 @@ group :development do
 end
 
 gem 'will_paginate', '~> 3.1.0'
+gem 'redcarpet', '~> 3.2.2'
+gem 'pygments.rb', '~> 0.6.0'
