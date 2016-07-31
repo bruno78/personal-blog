@@ -37,9 +37,7 @@ class PostsController < ApplicationController
 
   def update
 
-    if @post.update(params[:post].permit(:title, :blurb, :body,
-                                         :all_tags, :image, :remote_image_url,
-                                         :remove_image))
+    if @post.update post_params
       redirect_to @post
     else
       render 'edit'
@@ -56,11 +54,11 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :blurb, :body,
                                    :all_tags, :image, :remote_image_url,
-                                   :remove_image)
+                                   :remove_image, :slug)
     end
 
     def find_post
-      @post = Post.find(params[:id])
+      @post = Post.friendly.find(params[:id])
     end
 
 end

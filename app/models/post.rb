@@ -1,9 +1,11 @@
 class Post < ActiveRecord::Base
+  extend FriendlyId
   validates :title, presence: true, length: { minimum: 5 }
   validates :body, presence: true
   has_many :taggings
   has_many :tags, through: :taggings, dependent: :destroy
   mount_uploader :image, ImageUploader
+  friendly_id :title, use: :slugged
 
   def all_tags=(names)
     self.tags = names.split(',').map do |name|
