@@ -31,7 +31,18 @@
    url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
  }
 
- /* To set up img size for the posts
+ #post-body {
+   width: 100%;
+   height: 602px;
+ }
+
+ #post-blurb {
+   width: 100%;
+   height: 200px;
+ }
+
+ /*
+ To set up img size for the posts
  .container {
    width: 900px; try percentage if it doesn't work
  }

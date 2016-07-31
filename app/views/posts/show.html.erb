@@ -23,10 +23,10 @@
    <hr>
 
    <!-- Preview Image -->
-   <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-
-   <hr>
-
+   <% if @post.image? %>
+    <%= image_tag(@post.image_url(:cover), class: "img-responsive") %>
+    <hr>
+   <% end %>
    <!-- Post Content -->
    <p class="lead"><%= @post.blurb %></p>
    <p><%= markdown @post.body %></p>

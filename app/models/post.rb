@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   validates :body, presence: true
   has_many :taggings
   has_many :tags, through: :taggings, dependent: :destroy
+  mount_uploader :image, ImageUploader
 
   def all_tags=(names)
     self.tags = names.split(',').map do |name|
@@ -16,13 +17,6 @@ class Post < ActiveRecord::Base
 
   def self.tagged_with(name)
     Tag.find_by_name!(name).posts
-  end
-
-  def self.search(search)
-    return scoped unless search.present?
-    where("title LIKE ?", "%#{search}%")
-    where("blurb LIKE ?", "%#{search}%")
-    where("body LIKE ?", "%#{search}%")
   end
 
 end

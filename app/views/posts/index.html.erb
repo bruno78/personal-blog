@@ -9,17 +9,14 @@
   </p>
   <p><span class="glyphicon glyphicon-time"></span> <%= post.created_at.strftime("%B %d, %Y") %></p>
   <hr>
-  <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+  <% if post.image? %>
+    <%= image_tag(post.image_url(:cover), class: "img-responsive") %>
   <hr>
+  <% end %>
   <p><%= post.blurb %></p>
   <p ><%= link_to "Read More", post, class: "btn btn-primary" %><span class="glyphicon glyphicon-chevron-right"></span></p>
 
   <hr>
 <% end %>
-
-<form action="<%= posts_path %>" method="get" >
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", name: nil %>
-</form>
 
 <div class="pager"><%= will_paginate @posts, :page_links => false %></div>
