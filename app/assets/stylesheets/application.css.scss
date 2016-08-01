@@ -15,9 +15,13 @@
  */
 
  body {
-     padding-top: 90px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+     padding-top: 80px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
      background: url("tweed.png");
  }
+
+@media screen and (max-width: 767px) {
+  body { padding-top: 30px; }
+}
 
  footer {
      margin: 50px 0;
@@ -35,15 +39,18 @@
 
   .shadow-border {
     border-radius: .35rem;
-   box-shadow: 0 0 20px 7px rgba(0,0,0,0.075);
+    box-shadow: 0 0 0 1px rgba(34,34,34,0.1),0 6px 12px rgba(34,34,34,0.1);;
   }
+
+/*     box-shadow: 0 0 0 1px rgba(34,34,34,0.1),0 6px 12px rgba(34,34,34,0.1);
+       box-shadow: 0 0 20px 7px rgba(0,0,0,0.075)    */
 
   .navbar-inverse {
     box-shadow: -5px -1px 34px #000;
   }
 
   #posts-font {
-    background: #fff; // Alternative color  #FFF8ED
+    background: #EDECEA; // Alternative color  #FFF8ED F2F1EF EAEAE8 DDDDDB E2E2E0 E5E5E3 EDECEA
   }
 
  #post-body {
