@@ -69,6 +69,24 @@ This goes on index.html.erb
     </li>
 </ul> -->
 
+CSS of pagination:
+.next >a, .pager .next>span: float: right;
+
+.pager li>a, .pager li>span
+display: inline-block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+
+    %= will_paginate @obj_instance, :prev_label => '<<', :next_label => '>>' %>
+
+    That’s it, just give what ever value you like to prev_label and next_label symbols.
+
+    Similarly, if you want to add images then do this
+
+    <%= will_paginate @obj_instance, :prev_label => image_tag('n9.gif'), :next_label => image_tag('n8.gif') %>
+    
 /***** IMAGE ******/
 show.html.erb
 <!-- Preview Image -->
