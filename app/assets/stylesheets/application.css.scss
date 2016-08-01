@@ -18,14 +18,17 @@
      padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
      background: url("tweed.png");
  }
-
-@media screen and (max-width: 767px) {
-  body { padding-top: 30px; }
-}
+ @media screen and (max-width: 767px) {
+   body { padding-top: 50px; }
+   .page-header {
+     padding-top: 10px;
+   }
+ }
 
 .page-header {
-  margin: 30px 0 10px;
+  margin: 20px 0 15px;
   border-bottom: none;
+  text-shadow: 0 1px 2px black;
 }
 
 
@@ -38,7 +41,6 @@
   h2, h1 {
       font-family: 'Playfair Display', serif;
       font-weight: 900;
-      letter-spacing: -30;
        color: #333;
      }
   #blurb, .lead {font-family: 'Playfair Display', serif;
@@ -170,6 +172,7 @@ font-family: 'Source Serif Pro', serif;
 
   #posts-font {
     background: #fff; // Alternative color  #FFF8ED F2F1EF EAEAE8 DDDDDB E2E2E0 E5E5E3 EDECEA
+    padding-top: 1pt;
   }
 
  #form-body {
