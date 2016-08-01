@@ -11,6 +11,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Google fonts -->
+  <!-- %= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Lora|Open+Sans:800|Playfair+Display:400,400i|Raleway:700|Roboto|Source+Sans+Pro|Source+Serif+Pro:400,700", media: 'all', 'data-turbolinks-track' => true  % -->
+
+  <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:800|Playfair+Display:400,400i,900,900i|Raleway:700|Roboto|Roboto+Condensed|Source+Sans+Pro|Source+Serif+Pro:400,700" rel="stylesheet">
 </head>
 <body>
 
@@ -51,22 +55,27 @@
 
   <!-- Page Content -->
   <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <% flash.each do |name, msg| %>
+            <% content_tag(:div, msg, class: "alert") %>
+          <% end %>
+          <h1 class="page-header">
+            <% if current_page?(root_path) %>
+              Latest Projects
+              <small>Secondary Text</small>
+            <% else %>
+            <small><%= link_to "Back to All Projects", root_path %></small>
+            <% end %>
+          </h1>
+        </div>
+      </div>
 
       <div class="row">
 
+
           <!-- Blog Entries Column -->
           <div class="col-md-8 shadow-border" id="posts-font">
-            <% flash.each do |name, msg| %>
-              <% content_tag(:div, msg, class: "alert") %>
-            <% end %>
-            <h1 class="page-header">
-              <% if current_page?(root_path) %>
-                Page Heading
-                <small>Secondary Text</small>
-              <% else %>
-              <small><%= link_to "Back to All Projects", root_path %></small>
-              <% end %>
-            </h1>
 
 
               <%= yield %>

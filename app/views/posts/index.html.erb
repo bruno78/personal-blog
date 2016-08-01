@@ -13,7 +13,7 @@
     <%= image_tag(post.image_url(:cover), class: "img-responsive") %>
   <hr>
   <% end %>
-  <p><%= post.blurb %></p>
+  <p id="blurb"><%= post.blurb %></p>
   <p ><%= link_to "Read More", post, class: "btn btn-primary" %><span class="glyphicon glyphicon-chevron-right"></span></p>
 
   <hr>
