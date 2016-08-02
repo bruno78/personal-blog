@@ -36,7 +36,8 @@
   width: 550px;
   padding-left: 5px;
   padding-right: 5px;
-  text-shadow:  0 12px 24px rgba(0,0,0,0.35); // 0 3px 4px #333;
+  background-color: #fff;
+  border-radius: 10px;
   .cover {
     width: 220px;
     margin: 0 0 20px 40px;
@@ -46,7 +47,7 @@
   h1 {
       font: 5em 'Playfair Display', serif;
       font-weight: 900; // font-size: 80px;
-      color: #EAEAEA;
+      color: #333; //#EAEAEA;
       text-transform: lowercase;
       text-align: right;
       width: 220px;
@@ -55,8 +56,9 @@
       display: inline-block;
       vertical-align: top;
       margin: 0;
-      padding-top: 1em;
+      padding-top: 0.7em;
       padding-left: 1em;
+      text-shadow:  0 12px 24px rgba(0,0,0,0.35); // 0 3px 4px #333;
       span {
         color: #C15557;
         text-shadow: 0 1px 2px black;
@@ -64,12 +66,13 @@
   }
   p {
     text-align: justify;
-    color: #EDEDED;
+    color: #333; // #EDEDED;
     font: 15px/21px 'Muli', sans-serif;
     margin-bottom: 50px;
     display: block;
     width: 430px;
     margin: auto;
+    padding-bottom: 20px;
   }
 }
 
