@@ -185,30 +185,7 @@ font-family: 'Source Serif Pro', serif;
    height: 200px;
  }
 
- .pagination {
-     padding-left: 0;
-    margin: 20px 0;
-    text-align: center;
-    list-style: none;
- }
-
- .previous_page a{
-    float: left;
-    display: inline-block;
-    padding: 5px 14px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 15px;
- }
-
-.next_page a{
-  float: right;
-  display: inline-block;
-  padding: 5px 14px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-}
+ 
  /*
  To set up img size for the posts
  .container {
@@ -258,65 +235,5 @@ circle navbar
 
  @import 'posts';
  @import 'pygments';
-
- .pagination {
-    font-size: 11px;
-    padding-left: 0;
-    margin: 20px 0;
-    text-align: center;
-    list-style: none;
- }
-     .pagination a,
-     .pagination span {
-         padding: 3px 3px 2px;
-     }
-     .pagination .disabled {
-         background:none repeat scroll 0 0 transparent;
-         border:medium none;
-         color:#999999;
-         cursor:default;
-     }
-     .pagination a {
-         color:#337ab7;
-         cursor:pointer;
-         text-decoration:none;
-     }
-     .pagination a:hover {
-         background-color:#337ab7;
-         border-bottom:1px solid #337ab7;
-         border-color:#D8DFEA #D8DFEA #337ab7;
-         color:#FFFFFF;
-         text-decoration:none;
-     }
-     .pagination .current {}
-         .pagination .current {
-             border-bottom:2px solid #337ab7;
-             border-color:#337ab7;
-             color:#337ab7;
-             font-weight:bold;
-             padding-left:2px;
-             padding-right:2px;
-         }
-         .pagination .current a:hover {
-             background-color:#337ab7;
-             color:#FFFFFF;
-         }
-
-     .pagination .previous_page {
-       float: left;
-       display: inline-block;
-       padding: 5px 14px;
-       background-color: #fff;
-       border: 1px solid #ddd;
-       border-radius: 15px;
-
-     }
-     .pagination .next_page {
-       float: right;
-       display: inline-block;
-       padding: 5px 14px;
-       background-color: #fff;
-       border: 1px solid #ddd;
-       border-radius: 15px;
-
-     }
+ @import 'about';
+ @import 'pagination';

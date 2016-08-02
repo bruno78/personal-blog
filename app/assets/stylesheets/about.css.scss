@@ -1,0 +1,180 @@
+
+
+
+.fox-text {
+  padding: 40px 0 310px 0;
+  position: relative;
+  overflow: hidden;
+  h1 {
+    color: #8ec9d2;
+    font: 36px 'Ovo', serif;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  p {
+    color: #B7BBBF;
+    font: 15px/21px 'Muli', sans-serif;
+    font-weight: 300;
+    text-align: justify;
+  }
+}
+
+/* .container {
+ width: 960px
+ margin: 0 auto;
+ media
+ .fox-test {
+   .container {
+     width: 100%;
+   }
+ }
+} */
+
+.about-pic {
+  font-family: 'Ovo', serif;
+  margin: 0 auto;
+  width: 550px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-shadow:  0 12px 24px rgba(0,0,0,0.35); // 0 3px 4px #333;
+  .cover {
+    width: 220px;
+    margin: 0 0 20px 40px;
+    display: inline-block;
+    padding-top: 1.2em;
+  }
+  h1 {
+      font: 5em 'Playfair Display', serif;
+      font-weight: 900; // font-size: 80px;
+      color: #EAEAEA;
+      text-transform: lowercase;
+      text-align: right;
+      width: 220px;
+      letter-spacing: -0.04em;
+      line-height: 1.1em;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      padding-top: 1em;
+      padding-left: 1em;
+      span {
+        color: #C15557;
+        text-shadow: 0 1px 2px black;
+      }
+  }
+  p {
+    text-align: justify;
+    color: #EDEDED;
+    font: 15px/21px 'Muli', sans-serif;
+    margin-bottom: 50px;
+    display: block;
+    width: 430px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px){
+  .about-pic {
+    width: auto;
+    max-width: 420px;
+    padding: 0 20px;
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .about-pic {
+    h1 {
+      font-size: 55px;
+    }
+  }
+}
+
+
+
+/*
+
+.about {
+  font-family: 'Ovo', serif;
+  margin: 0 auto;
+  width: 420px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-shadow:  0 12px 24px rgba(0,0,0,0.35); // 0 3px 4px #333;
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    color: #EAEAEA; // #EDEDED, #333, C16E70, C15557, EDEDED
+    font-size: 80px;
+    span {
+      color: #C15557;
+      text-shadow: 0 1px 2px black;
+    }
+  }
+  p {
+    text-align: justify;
+    color: #EDEDED;
+    font: 15px/21px 'Muli', sans-serif;
+  }
+}
+
+@media (max-width: 768px){
+  .about {
+    width: auto;
+    max-width: 420px;
+    padding: 0 20px;
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .about h1 {
+    font-size: 55px;
+  }
+}
+
+
+
+
+.about-bee {
+  padding-top: 40px;
+  max-width: 800px;
+  width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+  .cover {
+        margin-bottom: 50px;
+        display: block;
+        width: 520px;
+        text-align: center;
+        margin: auto;
+  }
+    h1 {
+        font: 5em 'Yeseva One', Georgia, serif;
+        color: #37424A;
+        text-transform: lowercase;
+        text-align: right;
+        width: 350px;
+        letter-spacing: -0.04em;
+        line-height: 1.1em;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+      text-align: justify;
+      font: 300 0.8em/1.625em 'Merriweather Sans', Helvetica, sans-serif;
+      color: #37424A;
+      width: 270px;
+      margin: 0 0 20px 25px;
+      display: inline-block;
+      padding-top: 1.2em;
+    }
+
+}
+*/

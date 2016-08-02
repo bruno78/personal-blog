@@ -1,22 +1,24 @@
 <!-- The posts goes on the main page -->
+<div class="col-md-8 shadow-border" id="posts-font">
+  <% @posts.each do |post| %>
+    <h2>
+        <%= link_to post.title, post %>
+    </h2>
+    <p class="lead">
+        by <a href="index.php">Bruno G. Tavares</a>
+    </p>
+    <p><span class="glyphicon glyphicon-time"></span> <%= post.created_at.strftime("%B %d, %Y") %></p>
+    <hr>
+    <% if post.image? %>
+      <%= image_tag(post.image_url(:cover), class: "img-responsive") %>
+    <hr>
+    <% end %>
+    <p id="blurb"><%= post.blurb %></p>
+    <p ><%= link_to "Read More", post, class: "btn btn-primary" %><span class="glyphicon glyphicon-chevron-right"></span></p>
 
-<% @posts.each do |post| %>
-  <h2>
-      <%= link_to post.title, post %>
-  </h2>
-  <p class="lead">
-      by <a href="index.php">Bruno G. Tavares</a>
-  </p>
-  <p><span class="glyphicon glyphicon-time"></span> <%= post.created_at.strftime("%B %d, %Y") %></p>
-  <hr>
-  <% if post.image? %>
-    <%= image_tag(post.image_url(:cover), class: "img-responsive") %>
-  <hr>
+    <hr>
   <% end %>
-  <p id="blurb"><%= post.blurb %></p>
-  <p ><%= link_to "Read More", post, class: "btn btn-primary" %><span class="glyphicon glyphicon-chevron-right"></span></p>
 
-  <hr>
-<% end %>
-
-<div class="pager"><%= will_paginate @posts, :page_links => false %></div>
+  <div class="pager"><%= will_paginate @posts, :page_links => false %></div>
+</div>
+<%= render 'sidebar' %>

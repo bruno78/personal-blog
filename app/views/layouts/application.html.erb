@@ -14,7 +14,7 @@
   <!-- Google fonts -->
   <!-- %= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Lora|Open+Sans:800|Playfair+Display:400,400i|Raleway:700|Roboto|Source+Sans+Pro|Source+Serif+Pro:400,700", media: 'all', 'data-turbolinks-track' => true  % -->
 
-  <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:800|Playfair+Display:400,400i,900,900i|Raleway:700|Roboto|Roboto+Condensed|Source+Sans+Pro|Source+Serif+Pro:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:800|Muli|Ovo|Yeseva+One|Playfair+Display:400,400i,900,900i|Raleway:700|Roboto|Roboto+Condensed|Source+Sans+Pro|Source+Serif+Pro:400,700" rel="stylesheet">
 </head>
 <body>
 
@@ -38,10 +38,10 @@
                       <%= link_to "Projects", root_path %>
                   </li>
                   <li>
-                      <a href="#">About</a>
+                      <%= link_to "About", about_path %>
                   </li>
                   <li>
-                      <a href="#">Contact</a>
+                      <%= link_to "Contact", contact_path %>
                   </li>
                   <li><%= link_to "New Post", new_post_path %></li>
                   <li><a href="#">Log Out</a></li>
@@ -64,90 +64,23 @@
             <% if current_page?(root_path) %>
               Projects
               <!-- <small>Secondary Text</small> -->
+            <% elsif current_page?(about_path) %>
             <% else %>
-            <small><%= link_to "Back to All Projects", root_path %></small>
+              <small><%= link_to "Back to All Projects", root_path %></small>
             <% end %>
           </h1>
         </div>
       </div>
       <div class="row">
 
-
           <!-- Blog Entries Column -->
-          <div class="col-md-8 shadow-border" id="posts-font">
-
-
               <%= yield %>
-
-
-          </div>
-
-          <!-- Project Sidebar Widgets Column -->
-          <div class="col-md-4">
-
-              <!-- Project (was search and now links to social media) Well
-              <div class="well shadow-border">
-                <span class="social social-google-plus"></span>
-
-
-                -- Project search --
-                  <h4>Project Search</h4>
-                  <div class="input-group">
-                      <input type="text" class="form-control">
-                      <span class="input-group-btn">
-                          <button class="btn btn-default" type="button">
-                              <span class="glyphicon glyphicon-search"></span>
-                      </button>
-                      </span>
-                  </div>
-                     --/.input-group --
-
-              </div> -->
-
-              <!-- Projects Categories Well -->
-              <div class="well shadow-border">
-                  <h4>Categories</h4>
-                  <div class="row">
-                      <div class="col-lg-6">
-                          <ul class="list-unstyled">
-                            <% categorizer(Tag.counts) do |tag| %>
-                              <li>
-                                <%= link_to tag.name, tag_path(tag.name), class: "label label-primary" %>
-                                (<%= raw tag.count %>)
-                              </li>
-                            <% end %>
-                      </div>
-                      <!-- /.col-lg-6 -->
-                  </div>
-                  <!-- /.row -->
-              </div>
-
-              <!-- Side Widget Well -->
-              <div class="well shadow-border">
-                  <h4>Side Widget Well</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                  <p>
-                    Admin Login
-                  </p>
-              </div>
-
-          </div>
 
       </div>
       <!-- /.row -->
 
       <!--<hr>-->
 
-      <!-- Footer -->
-      <footer>
-          <div class="row">
-              <div class="col-lg-12">
-                  <p>Copyright &copy; Brunogtavares 2016</p>
-              </div>
-              <!-- /.col-lg-12 -->
-          </div>
-          <!-- /.row -->
-      </footer>
 
   </div>
   <!-- /.container -->

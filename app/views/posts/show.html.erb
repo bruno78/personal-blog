@@ -2,7 +2,7 @@
 
 
    <!-- Blog Post -->
-
+<div class="col-md-8 shadow-border" id="posts-font">
    <!-- Title -->
    <h1><%= @post.title %></h1>
 
@@ -29,6 +29,8 @@
    <% end %>
    <!-- Post Content -->
    <p class="lead"><%= @post.blurb %></p>
-   <p><%= markdown(@post.body) %></p>
+   <p><%= markdown(@post.body) %></p><br>
 
-   <hr>
+   <!-- <hr> -->
+</div>
+<%= render 'sidebar' %>
