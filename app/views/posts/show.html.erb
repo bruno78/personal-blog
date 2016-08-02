@@ -31,6 +31,18 @@
    <p class="lead"><%= @post.blurb %></p>
    <p><%= markdown(@post.body) %></p><br>
 
-   <!-- <hr> -->
+   <hr>
+
+   <!-- Share Project -->
+   <p>Share me</p>
+   <!-- Twitter -->
+   <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by Bruno G. Tavares - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+   <!-- Facebook -->
+   <a onclick="javascript:window.open('http://facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+   <!-- Google Plus -->
+   <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+   <!-- LinkedIn -->
+   <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-linkedin"></i></a>
+
 </div>
 <%= render 'sidebar' %>

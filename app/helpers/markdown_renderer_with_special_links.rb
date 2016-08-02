@@ -3,6 +3,7 @@ class MarkdownRendererWithSpecialLinks < Redcarpet::Render::HTML
     case link_type
       when :url then url_link(link)
       when :email then email_link(link)
+      when :pyrenderer then renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
     end
   end
 
@@ -33,4 +34,5 @@ class MarkdownRendererWithSpecialLinks < Redcarpet::Render::HTML
   def email_link(email)
     "<a href=\"mailto:#{email}\">#{email}</a>"
   end
+
 end
