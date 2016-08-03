@@ -35,10 +35,16 @@ module ApplicationHelper
         <iframe src=\"https://player.vimeo.com/video/#{video_id}\" width=\"100%\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>"
     end
-    def image_link(link)
-      "<div class='embed-container'>
-        ![image](link)
-      </div>"
+    def image(link, title, alt_text)
+      if title =~ /=(\d+)x(\d+)/
+        %(<img src="#{link}" width="#{$1}px" height="#{$2}px" alt="#{alt_text}>")
+      elsif title =~ /=(\d+)x/
+        %(<img src="#{link}" width="#{$1}px" alt="#{alt_text}>")
+      elsif title =~ /=x(\d+)/
+        %(<img src="#{link}" height="#{$1}px" alt="#{alt_text}>")
+      else
+        %(<img src="#{link}" title="#{title}" alt="#{alt_text}">)
+      end
     end
     def normal_link(link)
       "<a href=\"#{link}\" target=\"_blank\">#{link}</a>"
