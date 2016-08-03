@@ -15,6 +15,8 @@ module ApplicationHelper
           youtube_link(link)
         elsif link.include?("https://vimeo.com")
           vimeo_link(link)
+        elsif link.downcase.include?(".jpg") || link.downcase.include?(".jpeg") || link.downcase.include?(".gif") || link.downcase.include?(".png")
+          image_link(link)
         else
           normal_link(link)
       end
@@ -31,6 +33,11 @@ module ApplicationHelper
       video_id = link[parameters_start..-1]
       "<div class='embed-container'>
         <iframe src=\"https://player.vimeo.com/video/#{video_id}\" width=\"100%\" height=\"360\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>"
+    end
+    def image_link(link)
+      "<div class='embed-container'>
+        ![image](link)
       </div>"
     end
     def normal_link(link)
