@@ -116,3 +116,5 @@ show.html.erb
       else
         %(<img src="#{link}" title="#{title}" alt="#{alt_text}">)
       end
+
+/\A([\w\.%\+\-])@([\w]{2,})\z/i

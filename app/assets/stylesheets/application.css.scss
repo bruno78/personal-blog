@@ -35,28 +35,6 @@
   margin-bottom: 20px;
 }
 
-/* POST FONTS */
-
-#posts-font {
-  font-family: 'Lora', serif;
-  font-size: 13pt;
-  h2, h1 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      color: #5c5c5c; // #333;
-      font-size: 40px;
-     }
-  #blurb, .lead {font-family: 'Playfair Display', serif;
-          font-style: italic;
-          font-size: 18px;
-   }
-
-   h2 > a, .lead > a {
-     color: #5c5c5c; //#333;
-   }
-}
-
-
 
 /*
 
@@ -174,6 +152,7 @@ font-family: 'Source Serif Pro', serif;
   }
 
   #posts-font {
+    //background-image: url('paper2.jpg');
     background: #fff; // Alternative color  #FFF8ED F2F1EF EAEAE8 DDDDDB E2E2E0 E5E5E3 EDECEA
     padding-top: 1pt;
   }
@@ -266,3 +245,4 @@ circle navbar
  @import 'pygments';
  @import 'about';
  @import 'pagination';
+ @import 'contacts';

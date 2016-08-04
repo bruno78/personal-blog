@@ -1,3 +1,25 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* POST FONTS */
+
+#posts-font {
+  font-family: 'Lora', serif;
+  font-size: 10pt;
+  h2, h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      color: #333; // #333; #5c5c5c
+      font-size: 40px;
+     }
+  #blurb, .lead {font-family: 'Playfair Display', serif;
+          font-style: italic;
+          font-size: 18px;
+   }
+
+   h2 > a, .lead > a {
+     color: #333; //#333;
+     text-shadow:  0 12px 24px rgba(0,0,0,0.35);
+   }
+}

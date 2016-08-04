@@ -37,13 +37,13 @@ module ApplicationHelper
     end
     def image(link, title, alt_text)
       if title =~ /=(\d+)x(\d+)/
-        %(<img src="#{link}" width="#{$1}px" height="#{$2}px" alt="#{alt_text}>")
+        %(<img src="#{link}" width="#{$1}px" height="#{$2}px" class="img-responsive" alt="#{alt_text}>")
       elsif title =~ /=(\d+)x/
-        %(<img src="#{link}" width="#{$1}px" alt="#{alt_text}>")
+        %(<img src="#{link}" width="#{$1}px" class="img-responsive" alt="#{alt_text}>")
       elsif title =~ /=x(\d+)/
-        %(<img src="#{link}" height="#{$1}px" alt="#{alt_text}>")
+        %(<img src="#{link}" height="#{$1}px" class="img-responsive" alt="#{alt_text}>")
       else
-        %(<img src="#{link}" title="#{title}" alt="#{alt_text}">)
+        %(<img src="#{link}" title="#{title}" class="img-responsive" alt="#{alt_text}">)
       end
     end
     def normal_link(link)

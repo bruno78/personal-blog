@@ -1,37 +1,5 @@
 
-
-
-.fox-text {
-  padding: 40px 0 310px 0;
-  position: relative;
-  overflow: hidden;
-  h1 {
-    color: #8ec9d2;
-    font: 36px 'Ovo', serif;
-    text-align: center;
-    margin-bottom: 16px;
-  }
-  p {
-    color: #B7BBBF;
-    font: 15px/21px 'Muli', sans-serif;
-    font-weight: 300;
-    text-align: justify;
-  }
-}
-
-/* .container {
- width: 960px
- margin: 0 auto;
- media
- .fox-test {
-   .container {
-     width: 100%;
-   }
- }
-} */
-
 .about-pic {
-  font-family: 'Ovo', serif;
   margin: 0 auto;
   width: 550px;
   padding-left: 5px;
@@ -83,6 +51,9 @@
     padding: 0 20px;
     h1 {
       font-size: 60px;
+    }
+    p {
+      width: 100%;
     }
   }
 }
