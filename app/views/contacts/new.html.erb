@@ -1,0 +1,32 @@
+<!--div class="container-fluid fox-text"-->
+    <div class="contact-page shadow-border">
+
+      <h1> say <span>hello!</span></h1>
+
+      <%= form_for @contact do |f| %>
+        <div class="form-group" >
+          <%= f.label :name %>
+          <%= f.text_field :name, required: true, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, required: true, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :message %>
+          <%= f.text_area :message, as: :text, class: "form-control", id: "form-body" %>
+        </div>
+
+        <div class="hidden">
+          <%= f.label :nickname %>
+          <%= f.text_field :nickname, hint: 'leave this field blank', class: "hidden" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit "Send Message", class: "btn btn-md btn-primary" %>
+        </div>
+      <% end %>
+
+    </div>
