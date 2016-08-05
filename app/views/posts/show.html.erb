@@ -2,24 +2,23 @@
 
 
    <!-- Blog Post -->
-<div class="col-md-8 shadow-border" id="posts-font">
+<div class="col-md-8" id="posts-font">
    <!-- Title -->
    <h1><%= @post.title %></h1>
 
    <!-- Author/tags -->
-   <p class="lead">
+   <p class="lead-tag">
      <% if @post.all_tags != "" %>
-        under <%=raw tag_links(@post.all_tags) %>
+        by BRUNO G. TAVARES, under <%=raw tag_links(@post.all_tags) %>
      <% end %>
    </p>
 
-   <hr>
-
    <!-- Date/Time -->
-   <p><span class="glyphicon glyphicon-time"></span> Submitted <%= time_ago_in_words(@post.created_at) %> ago
+   <p class="time-stamp"><span class="glyphicon glyphicon-time"></span> Submitted <%= time_ago_in_words(@post.created_at) %> ago
      | <%= link_to 'Edit', edit_post_path(@post) %>
      | <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
    </p>
+
    <hr>
 
    <!-- Preview Image -->
@@ -28,21 +27,25 @@
     <hr>
    <% end %>
    <!-- Post Content -->
-   <p class="lead"><%= @post.blurb %></p>
+   <p id="blurb"><%= @post.blurb %></p>
    <p><%= markdown(@post.body) %></p><br>
 
    <hr>
 
    <!-- Share Project -->
-   <p>Share me</p>
-   <!-- Twitter -->
-   <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by Bruno G. Tavares - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
-   <!-- Facebook -->
-   <a onclick="javascript:window.open('http://facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
-   <!-- Google Plus -->
-   <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
-   <!-- LinkedIn -->
-   <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-linkedin"></i></a>
+   <div class="container share-me">
+     <div class="row">
+       <p>Share this post</p>
+       <!-- Twitter -->
+       <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by Bruno G. Tavares - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+       <!-- Facebook -->
+       <a onclick="javascript:window.open('http://facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+       <!-- Google Plus -->
+       <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+       <!-- LinkedIn -->
+       <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-linkedin"></i></a>
+     </div>
+   </div>
 
 </div>
 <%= render 'sidebar' %>
