@@ -1,5 +1,5 @@
 <!-- The posts goes on the main page -->
-<div class="col-md-8" id="posts-font">
+<div class="col-md-8 posts-font">
   <% @posts.each do |post| %>
     <p class="date"><span><%= post.created_at.strftime("%B %d, %Y") %></span></p>
     <!-- <span class="glyphicon glyphicon-time"></span> post.created_at.strftime("%B %d, %Y") -->
@@ -9,10 +9,9 @@
     <p class="lead">
       <span>by <a href="/">Bruno G. Tavares</a></span>
     </p>
-    <br>
     <% if post.image? %>
       <%= image_tag(post.image_url(:cover), class: "img-responsive") %>
-    <br>
+      <br>
     <% end %>
     <p id="front-blurb"><%= post.blurb %></p>
     <p class="line" ><%= link_to "More", post, class: "read-more" %></p>

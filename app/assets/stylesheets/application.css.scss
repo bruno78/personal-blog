@@ -66,7 +66,7 @@
     font-family: 'Muli'
   }
   .label-primary {
-    background-color: #f83265; // rgba(221, 34, 0, 0.61);
+    background-color:  rgba(248, 50, 101, 0.86); // gba(248, 50, 101, 0.86); #f83265; rgba(221, 34, 0, 0.61);
   }
 
 }
@@ -88,7 +88,6 @@
  }
 
 /* Setting up for videos at app/helper/posts/helpers/application_helper.rb */
-
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
