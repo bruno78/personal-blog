@@ -102,8 +102,25 @@
   }
 }
 
+.thumb-blog {
+  max-width: 100px;
+  margin-left: 20px;
+}
+.find-me {
+  @extend .share-me;
+  text-align: left;
+  .row {
+    margin-left: -21px;
+  }
+  i {
+    font-size: 12pt;
+  }
+  a {
+    color: #646464;
+  }
+}
 @media (max-width: 992px){
-  #posts-font {
+  .posts-font {
     padding-left: 12pt;
   }
   #right-border {
