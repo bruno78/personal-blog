@@ -1,22 +1,22 @@
-<!--div class="container-fluid fox-text"-->
-    <div class="contact-page">
 
-      <h1> say <span>hello!</span></h1>
+    <div class="contact-page">
+      <p class="lead-contact"> <span>drop me a note</span></p>
 
       <%= form_for @contact do |f| %>
-        <div class="form-group" >
+
+        <div class="form-group floating-label-form-group controls">
           <%= f.label :name %>
-          <%= f.text_field :name, required: true, class: "form-control" %>
+          <%= f.text_field :name, required: true, class: "form-control", id: "name", placeholder: "Name" %>
         </div>
 
-        <div class="form-group">
+        <div class="form-group floating-label-form-group controls">
           <%= f.label :email %>
-          <%= f.email_field :email, required: true, class: "form-control" %>
+          <%= f.email_field :email, required: true, class: "form-control", id: "email", placeholder: "Email Address" %>
         </div>
 
-        <div class="form-group">
+        <div class="form-group floating-label-form-group controls" id="form-body" >
           <%= f.label :message %>
-          <%= f.text_area :message, as: :text, class: "form-control", id: "form-body" %>
+          <%= f.text_area :message, as: :text, class: "form-control", id: "message", placeholder:"Message" %>
         </div>
 
         <div class="hidden">
@@ -24,8 +24,8 @@
           <%= f.text_field :nickname, hint: 'leave this field blank', class: "hidden" %>
         </div>
 
-        <div class="form-group">
-          <%= f.submit "Send Message", class: "btn btn-md btn-primary" %>
+        <div class="form-group line">
+          <%= f.submit "Send", class: "contact-send" %>
         </div>
       <% end %>
 
