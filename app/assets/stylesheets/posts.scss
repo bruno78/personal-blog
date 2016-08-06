@@ -23,6 +23,9 @@
   .col-md-8 {
     margin-bottom: 20px;
   }
+  #post-title {
+    margin-top: 10px;
+  }
   h2, h1 {
       font-family: 'Playfair Display', serif;
       font-weight: 900;
@@ -102,6 +105,8 @@
 @media (max-width: 992px){
   #posts-font {
     padding-left: 12pt;
+  }
+  #right-border {
     border-right: none;
   }
 }

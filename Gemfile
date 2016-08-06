@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -42,6 +43,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+=begin
 group :development do
   gem 'sqlite3'
 end
@@ -50,7 +53,7 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
+=end
 
 gem 'will_paginate', '~> 3.1.0'
 gem 'redcarpet', '~> 3.2.2'

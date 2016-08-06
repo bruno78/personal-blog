@@ -88,7 +88,6 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
-    pg (0.18.4)
     pkg-config (1.1.7)
     posix-spawn (0.3.11)
     pygments.rb (0.6.3)
@@ -116,11 +115,6 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (4.2.5.1)
       actionpack (= 4.2.5.1)
       activesupport (= 4.2.5.1)
@@ -181,10 +175,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mail_form (~> 1.5.1)
-  pg
   pygments.rb (~> 0.6.0)
   rails (= 4.2.5.1)
-  rails_12factor
   redcarpet (~> 3.2.2)
   rmagick
   sass-rails (~> 5.0)
