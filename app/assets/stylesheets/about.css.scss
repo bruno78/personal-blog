@@ -1,4 +1,5 @@
 
+
 .about-pic {
   margin: 0 auto;
   width: 550px;
@@ -7,9 +8,9 @@
   background-color: #fff; //#eee;
   // border-radius: 10px;
   .cover {
-    width: 220px;
-    margin: 0 0 20px 40px;
-    display: inline-block;
+    width: 430px;
+    margin: 0 auto;
+    display: block;
     padding-top: 1.2em;
   }
   h1 {
@@ -35,13 +36,27 @@
   p {
     text-align: justify;
     color: #333; // #EDEDED;
-    font: 15px/21px 'Muli', sans-serif;
+    font: 10pt 'Muli', sans-serif;
     margin-bottom: 50px;
     display: block;
     width: 430px;
     margin: auto;
     padding-bottom: 20px;
   }
+  .lead {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 13pt;
+    margin-top: 15px;
+    display: block;
+    position: relative;
+    text-align: center;
+    z-index: 1; //padding-bottom: 38px;
+    background: #fff; // #111
+    padding-bottom: 15px;
+  }
+  .lead:before { border-top: 1px solid #999; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; } // #d6cfcf
+  .lead span { background: #fdfdfd; color: #f83265; padding: 0 10px;}
 }
 
 @media (max-width: 768px){
