@@ -4,6 +4,12 @@
 
 /* POST FONTS */
 
+a:hover {
+  transition: all 0.2s ease-in-out;
+  color: #f83265;
+  text-decoration: none;
+}
+
 #post-body {
   line-height: 1.8;
 }
@@ -35,9 +41,22 @@
      }
   .lead-tag {
     font-size: 10pt;
+    a {
+      color: #646464;
+    }
+    a:hover {
+      transition: all 0.2s ease-in-out;
+      color: #f83265;
+      text-decoration: none;
+    }
   }
   .time-stamp {
     font-size: 9pt;
+    a:hover {
+      transition: all 0.2s ease-in-out;
+      color: #646464;
+      text-decoration: underline;
+    }
   }
   #blurb {
     font-family: 'Playfair Display', serif;
@@ -61,6 +80,17 @@
     background: #fff; // #111
   }
 
+  .lead {
+    a {
+      color: #646464;
+    }
+    a:hover {
+      transition: all 0.2s ease-in-out;
+      color: #f83265;
+      text-decoration: none;
+    }
+  }
+
   .date:before { border-top: 1px solid #999; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; } // #d6cfcf
 
   .lead:before { border-top: 1px solid #eee; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; } // #d6cfcf
@@ -73,7 +103,17 @@
      color: #333; //#333;
      //text-shadow:  0 12px 24px rgba(0,0,0,0.35);
    }
-   a { color: #646464;}
+   h2 > a:hover {
+     transition: all 0.2s ease-in-out;
+     color: #646464;
+     text-decoration: none;
+   }
+   a { color: #f83265;}
+   p > a:hover {
+     transition: all 0.2s ease-in-out;
+     color: #646464;
+     text-decoration: none;
+   }
    .line { border-top: 1px solid #999; // #d6cfcf
      display: block;
      margin-top: 60px;
@@ -87,7 +127,7 @@
      left: 50%; text-align: center; text-transform: uppercase; width: 80px;
    }
 
-.read-more:hover { background: #f83265; text-decoration: none; }
+.read-more:hover, .read-more:focus { background: #f83265; color: #fff; text-decoration: none; }
 
 }
 
@@ -100,6 +140,13 @@
   }
   i {
     margin-bottom: 20px;
+    font-size: 16px;
+    color: #646464;
+  }
+  i:hover {
+    transition: all 0.2s ease-in-out;
+    color: #f83265;
+    text-decoration: none;
   }
 }
 
@@ -114,7 +161,7 @@
     margin-left: -21px;
   }
   i {
-    font-size: 12pt;
+    font-size: 13pt;
   }
   a {
     color: #646464;

@@ -61,11 +61,12 @@
           <% flash.each do |name, msg| %>
             <% content_tag(:div, msg, class: "alert") %>
           <% end %>
+
           <h1 class="page-header">
             <% if current_page?(root_path) %>
               Projects
               <!-- <small>Secondary Text</small> -->
-            <% elsif current_page?(about_path) %>
+            <% elsif current_page?(about_path) || current_page?(contacts_path)%>
             <% else %>
               <small><%= link_to "Back to All Projects", root_path %></small>
             <% end %>

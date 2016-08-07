@@ -7,7 +7,7 @@
         <%= link_to post.title, post %>
     </h2>
     <p class="lead">
-      <span>by <a href="/">Bruno G. Tavares</a></span>
+      <span>by <%= link_to "Bruno G. Tavares", about_path %></span>
     </p>
     <% if post.image? %>
       <%= image_tag(post.image_url(:cover), class: "img-responsive") %>
@@ -19,6 +19,6 @@
     <br>
   <% end %>
 
-  <div class="pager"><%= will_paginate @posts, :page_links => false %></div>
+  <div class="pager"><%= will_paginate @posts, :previous_label => ' < ', :next_label => ' > ', :page_links => false %></div>
 </div>
 <%= render 'sidebar' %>

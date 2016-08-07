@@ -29,6 +29,12 @@
   margin: 20px 0 15px;
   border-bottom: none;
   text-shadow: 0 1px 2px black;
+  padding-left: 235px;
+  a { color: #646464; }
+  small {
+    font-size: 15px;
+    text-shadow: none;
+   }
 }
 
 .col-md-8 {
@@ -65,8 +71,17 @@
   h4 {
     font-family: 'Muli'
   }
+  li {
+    margin-bottom: 2px;
+  }
   .label-primary {
     background-color:  rgba(248, 50, 101, 0.86); // gba(248, 50, 101, 0.86); #f83265; rgba(221, 34, 0, 0.61);
+    font-size: 11px;
+  }
+  a.label-primary:hover {
+    transition: all 0.2s ease-in-out;
+    background: #646464;
+    text-decoration: none;
   }
 
 }
@@ -74,6 +89,9 @@
 @media (max-width: 992px) {
   .sidebar-style {
     padding-right: 19px;
+  }
+  .page-header {
+    padding-left: 0;
   }
 
 }
