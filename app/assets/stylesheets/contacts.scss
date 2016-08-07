@@ -78,6 +78,7 @@
 }
 .lead-contact:before { border-top: 1px solid #999; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; } // #d6cfcf
 .lead-contact span { background: #fdfdfd; color: #646464; padding: 0 10px;} //#f83265
+.lead-contact span.redish {padding: 0; color: #f83265;}
 
 .line { border-top: 1px solid #999; // #d6cfcf
   display: block;

@@ -53,6 +53,7 @@
   }
   .lead:before { border-top: 1px solid #999; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; } // #d6cfcf
   .lead span { background: #fdfdfd; color: #646464; padding: 0 10px;}
+  .lead span.redish {padding: 0; color: #f83265;}
 }
 
 @media (max-width: 768px){
