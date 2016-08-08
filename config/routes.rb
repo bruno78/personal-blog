@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   get 'tags/:tag', to: 'posts#index', as: :tag
   get '/about', to: 'pages#about'
   get '/contacts', to: 'contacts#new'
-  root "posts#index"
+  devise_scope :user do
+    get 'sign_in', to: 'devise/sessions#new'
+  end
   
+  root "posts#index"
+
   get '*path' => redirect('/')
 end
