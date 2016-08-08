@@ -62,6 +62,12 @@
             <% content_tag(:div, msg, class: "alert") %>
           <% end %>
 
+          <% if notice %>
+            <p class="notice"><%= notice %></p>
+          <% elsif alert %>
+            <p class="alert"><%= alert %></p>
+          <% end %>
+
           <h1 class="page-header">
             <% if current_page?(root_path) %>
               Projects
