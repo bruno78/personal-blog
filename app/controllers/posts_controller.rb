@@ -31,6 +31,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @tags = @post.all_tags
   end
 
   def edit

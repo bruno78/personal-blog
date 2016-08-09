@@ -2,7 +2,6 @@
 <div class="col-md-8 posts-font">
   <% @posts.each do |post| %>
     <p class="date"><span><%= post.created_at.strftime("%B %d, %Y") %></span></p>
-    <!-- <span class="glyphicon glyphicon-time"></span> post.created_at.strftime("%B %d, %Y") -->
     <h2 id="post-title">
         <%= link_to post.title, post %>
     </h2>

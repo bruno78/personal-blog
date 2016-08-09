@@ -1,6 +1,5 @@
 <!-- Each Post -->
 
-
    <!-- Blog Post -->
 <div class="col-md-8 posts-font" id="right-border">
 
@@ -14,8 +13,8 @@
   </p>
    <!-- Author/tags -->
    <p class="lead-tag" align='center'>
-     <% if @post.all_tags != "" %>
-      <%=raw tag_links(@post.all_tags) %>
+     <% if @tags != "" %>
+      <%= tag_links(@tags).html_safe %>
      <% end %>
    </p>
 
