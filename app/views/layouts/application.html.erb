@@ -12,9 +12,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <!-- Google fonts -->
-  <!-- %= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Lora|Open+Sans:800|Playfair+Display:400,400i|Raleway:700|Roboto|Source+Sans+Pro|Source+Serif+Pro:400,700", media: 'all', 'data-turbolinks-track' => true  % -->
-
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i|Muli:400,400i" rel="stylesheet">
+  <%= stylesheet_link_tag 'application', "https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,900,900i|Muli:400,400i", media: 'all', 'data-turbolinks-track' => true  %>
   <%= stylesheet_link_tag 'application', "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", media: 'all', 'data-turbolinks-track' => true  %>
 </head>
 <body>
@@ -45,6 +43,7 @@
                       <%= link_to "Contact", contacts_path %>
                   </li>
                   <% if user_signed_in? %>
+                  <li><%= link_to "Change your password", edit_user_registration_path %></li>
                   <li><%= link_to "New Post", new_post_path %></li>
                   <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
                   <% end %>
