@@ -45,6 +45,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'brakeman'
 end
 
 group :production do
@@ -61,4 +62,3 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'mail_form', '~> 1.5.1'
 gem 'validates_email_format_of'
 gem 'devise', '~> 3.4.1'
-gem 'brakeman'
