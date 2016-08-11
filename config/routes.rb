@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, :skip => [:registrations]
+  devise_for :users   #, :skip => [:registrations]
+=begin
   as :user do
     get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
     patch 'users' => 'devise/registrations#update', :as => 'user_registration'
   end
+=end
   resources :posts
   resources :contacts, only: [:new, :create]
   get 'tags/:tag', to: 'posts#index', as: :tag
