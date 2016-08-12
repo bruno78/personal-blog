@@ -39,6 +39,14 @@ a:hover {
       font-size: 32px;
       text-align: center;
      }
+  h3 {
+    @extend h2;
+    font-size: 25px;
+  }
+  h4 {
+    @extend h2;
+    font-size: 20px;
+  }
   .lead-tag {
     font-size: 10pt;
     a {
