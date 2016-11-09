@@ -1,28 +1,20 @@
-== README
+About this personal blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was built on Rails 4.2.5.1
 
-Things you may want to cover:
+It has the following features:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Posts
+* Create / Edit / Destroy
+* Markdown (RedCarpet)
+* Syntax highlighting (pygments)
+* Tagging and search by tags
+* The posts can render links, videos and images
+* You can adjust the height x width of the image and still responsive
+* It will display three posts per page (will_paginate)
+* Image uploader (carrierwave)
+* Responsiveness (bootstrap)
+* User (devise)
+* Contact (sendgrid)
+* Contact form with safe and valid email (validates_email_format_of + mail_form)
+* each post with link-names instead of id number (friendly_id)
